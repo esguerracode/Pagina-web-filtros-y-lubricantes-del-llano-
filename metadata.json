@@ -1,0 +1,7 @@
+{
+  "name": "Filtros y Lubricantes del Llano",
+  "description": "Sitio web corporativo y catálogo de productos para Filtros y Lubricantes del Llano SAS, especializado en maquinaria agrícola e industrial.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
