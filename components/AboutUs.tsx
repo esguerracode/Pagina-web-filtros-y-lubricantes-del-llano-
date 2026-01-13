@@ -1,8 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { History, Users, Award, Target, MapPin, ShieldCheck } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section id="nosotros" className="py-40 bg-white text-black relative overflow-hidden">
       {/* Background decoration */}
@@ -11,12 +13,24 @@ const AboutUs: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center relative z-10">
         <div className="relative group">
           {/* Owners Photo Frame with Professional Demo Image */}
-          <div className="relative z-10 rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] transform transition-transform duration-1000 group-hover:scale-[1.01] border-[12px] border-white">
-            <img 
-              src="https://images.unsplash.com/photo-1590684153482-d3302273aa4a?auto=format&fit=crop&q=80&w=1200" 
-              className="w-full h-[750px] object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-700"
-              alt="Instalaciones Filtros y Lubricantes"
-            />
+          <div className="relative z-10 rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] transform transition-transform duration-1000 group-hover:scale-[1.01] border-[12px] border-white min-h-[600px] flex items-center justify-center bg-gray-100">
+            {!imageError ? (
+              <img 
+                src="https://images.unsplash.com/photo-1590684153482-d3302273aa4a?auto=format&fit=crop&q=80&w=1200" 
+                className="w-full h-[750px] object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-700"
+                alt="Instalaciones Filtros y Lubricantes"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-[750px] bg-gradient-to-br from-[#006837] to-[#0a0a0a] flex flex-col items-center justify-center text-white p-12 text-center">
+                <div className="bg-white/20 p-8 rounded-full mb-8">
+                  <Users className="w-16 h-16 text-white" />
+                </div>
+                <h3 className="text-4xl font-black italic uppercase mb-4 tracking-tighter">Compromiso <br/> con el Llano</h3>
+                <p className="text-white/60 text-lg font-medium italic">Atención directa por sus propietarios en Puerto Gaitán.</p>
+              </div>
+            )}
+            
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pointer-events-none"></div>
             

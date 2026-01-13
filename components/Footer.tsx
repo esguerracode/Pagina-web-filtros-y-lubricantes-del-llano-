@@ -7,13 +7,15 @@ import Logo from './Logo';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0a0a0a] pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
-      {/* Decorative background logo silhouette as seen in user request */}
-      <div className="absolute bottom-0 right-0 opacity-[0.05] translate-y-1/2 translate-x-1/4 pointer-events-none">
-        <img 
-          src="https://i.ibb.co/XrxjY9M/owners-discrete.png" 
-          alt="Watermark" 
-          className="w-[1000px] grayscale invert contrast-125"
-        />
+      {/* Decorative background logo silhouette - Replaced broken image with SVG */}
+      <div className="absolute bottom-0 right-0 opacity-[0.03] translate-y-1/3 translate-x-1/4 pointer-events-none select-none">
+        <svg viewBox="0 0 120 100" className="w-[1200px] h-[1000px] text-white" fill="currentColor">
+          <path d="M10 80C30 70 50 85 70 75C90 65 110 80 110 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
+          <path d="M35 75V55H55L65 45H85V75H75M35 65H25V75H35" />
+          <circle cx="45" cy="75" r="8" />
+          <circle cx="75" cy="75" r="10" />
+          <rect x="60" y="35" width="4" height="15" />
+        </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
