@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# Filtros y Lubricantes del Llano SAS - Web Corporativa
 
-This contains everything you need to run your app locally.
+Plataforma web moderna construida con React, TypeScript y Tailwind CSS.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1RRymPzDuQ1rOJhuAvccTd1p9yxsjhUEo
+## 🚀 Requisitos Previos
 
-## Run Locally
+- Node.js (v18 o superior)
+- npm o yarn
 
-**Prerequisites:**  Node.js
+## 🛠️ Instalación y Desarrollo
 
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <tu-repositorio-url>
+    cd filtros-llano-web
+    ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Correr servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    Abre `http://localhost:5173` en tu navegador.
+
+## 📦 Build para Producción
+
+Para generar los archivos estáticos optimizados para Vercel:
+
+```bash
+npm run build
+```
+
+## ☁️ Despliegue en Vercel
+
+Este proyecto está configurado para ser detectado automáticamente por Vercel como un proyecto **Vite**.
+
+1. Sube el código a GitHub.
+2. Importa el repositorio en Vercel.
+3. Vercel detectará el framework "Vite" y los comandos `npm run build`.
+4. ¡Deploy!
+
+## 🎨 Stack Tecnológico
+
+- **Core:** React 18
+- **Lenguaje:** TypeScript
+- **Estilos:** Tailwind CSS
+- **Iconos:** Lucide React
+- **Build Tool:** Vite
